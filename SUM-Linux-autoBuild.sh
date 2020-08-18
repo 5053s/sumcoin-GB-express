@@ -18,25 +18,21 @@ sudo apt-get update
 # Install needed Sumcoind essentials
 sudo apt-get install \
       git -y \
-      build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils \
-      libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev \
-      libboost-all-dev \
-      software-properties-common \
+      build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils -y \
+      libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev -y \
+      libboost-all-dev -y \
+      software-properties-common -y \
 
-      sudo add-apt-repository ppa:bitcoin/bitcoin read ^M \
+      sudo add-apt-repository ppa:bitcoin/bitcoin \
 
       sudo apt-get update \
-      libdb4.8-dev libdb4.8++-dev \
-      libminiupnpc-dev \
-      libzmq3-dev \
-      libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev protobuf-compiler \
-      libqt4-dev libprotobuf-dev protobuf-compiler \
-      build-essential pkg-config libc6-dev m4 g++-multilib \
-      autoconf libtool ncurses-dev unzip git python python-zmq \
-      zlib1g-dev wget bsdmainutils automake curl apache2 libzmq3-dev
+      libdb4.8-dev libdb4.8++-dev -y \
+      libminiupnpc-dev -y \
+      libzmq3-dev -y \
+      libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev protobuf-compiler -y \
+      libqt4-dev libprotobuf-dev protobuf-compiler -y 
 
-# install branch 17 Sumcoin
-git clone -b 0.17 https://github.com/sumcoinlabs/sumcoin.git
+
 
 # Make .sumcoin data directory, touch sumcoin.conf, insert starter .conf
 mkdir .sumcoin
@@ -54,7 +50,16 @@ rpcuser=YOUR_SECUREsumcoinusername
 rpcpassword=YOUR_SecurePassword
 rpcport=3332
 maxconnections=100
+
+# Youre CAS Connection String will be
+#  >> http:YOUR_SECUREsumcoinusername:YOUR_SecurePassword:SERVER_IP_TO_YOUR_CAS:3332 <<
+#  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 EOF
+
+
+# install branch 17 Sumcoin
+git clone -b 0.17 https://github.com/sumcoinlabs/sumcoin.git
+
 
 # Build Sumcoin Ubuntu Client 
 cd sumcoin
@@ -70,7 +75,8 @@ cd ../..
 ./sumcoind
 
 echo "Your Sumcoin Daemon Should Now Be Built and Server Started"
+echo "It may take several hours before your node is syned"
 echo "You can run commands using ./sumcoin-cli"
 echo "Be sure to backup your wallet.dat file located in .sumcoin directory"
 
-echo "For assistance email support@sumcoin.org"
+echo "For assistance submit issue to https://github.com/sumcoinlabs/sumcoin/issues
