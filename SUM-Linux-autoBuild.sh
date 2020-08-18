@@ -23,7 +23,7 @@ sudo apt-get install \
       libboost-all-dev \
       software-properties-common \
 
-      sudo add-apt-repository ppa:bitcoin/bitcoin -enter \
+      sudo add-apt-repository ppa:bitcoin/bitcoin read ^M \
 
       sudo apt-get update \
       libdb4.8-dev libdb4.8++-dev \
