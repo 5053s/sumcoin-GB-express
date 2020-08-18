@@ -17,20 +17,20 @@ sudo apt-get update
 
 # Install needed Sumcoind essentials
 sudo apt-get install \
-      sudo apt-get git -y \
-      sudo apt-get -y build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils \
-      sudo apt-get -y libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev \
-      sudo apt-get -y libboost-all-dev \
-      sudo apt-get -y software-properties-common \
+      git -y \
+      build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils \
+      libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev \
+      libboost-all-dev \
+      software-properties-common \
 
       sudo add-apt-repository ppa:bitcoin/bitcoin -enter \
 
       sudo apt-get update \
-      sudo apt-get -y libdb4.8-dev libdb4.8++-dev \
-      sudo apt-get -y libminiupnpc-dev \
-      sudo apt-get -y libzmq3-dev \
-      sudo apt-get -y libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev protobuf-compiler \
-      sudo apt-get -y libqt4-dev libprotobuf-dev protobuf-compiler \
+      libdb4.8-dev libdb4.8++-dev \
+      libminiupnpc-dev \
+      libzmq3-dev \
+      libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev protobuf-compiler \
+      libqt4-dev libprotobuf-dev protobuf-compiler \
       build-essential pkg-config libc6-dev m4 g++-multilib \
       autoconf libtool ncurses-dev unzip git python python-zmq \
       zlib1g-dev wget bsdmainutils automake curl apache2 libzmq3-dev
