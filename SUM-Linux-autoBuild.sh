@@ -57,7 +57,7 @@ maxconnections=100
 EOF
 
 # Build Sumcoin Ubuntu Client 
-cd ~/sumcoin
+cd sumcoin
 ./autogen.sh
 ./configure --disable-tests --without-gui
 make
@@ -66,6 +66,8 @@ make
 cd src
 cp sumcoind ~/
 cp sumcoin-cli ~/
+cd ../..
+./sumcoind
 
 echo "Your Sumcoin Daemon Should Now Be Built and Server Started"
 echo "You can run commands using ./sumcoin-cli"
