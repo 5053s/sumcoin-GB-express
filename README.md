@@ -11,15 +11,15 @@ cd sumcoin-GB-express
 ```
 * Give permission to the shell script you wish to run - example:
 
-'sudo chmod +x expressLinux.sh '
+'sudo chmod +x expressUbuntu.sh '
 
 * then move to root and run
 ```
-cp expressLinux.sh ~/
+cp expressUbuntu.sh ~/
 ```
 ## Run the shell
 ```
-./expressLinux.sh
+./expressUbuntu.sh
 ```
 
 ### Configure resulting 3 marked lines in .sumcoin/sumcoin.conf for your General Bytes ATM
