@@ -10,12 +10,13 @@ git clone https://github.com/5053s/sumcoin-GB-express.git
 cd sumcoin-GB-express
 ```
 * Give permission to the shell script you wish to run - example:
-
-'sudo chmod +x expressUbuntu.sh '
-
+```
+sudo chmod +x expressUbuntu.sh
+```
 * then move to root and run
 ```
 cp expressUbuntu.sh ~/
+cd 
 ```
 ## Run the shell
 ```
